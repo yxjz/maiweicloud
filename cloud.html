@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        #box{
+            width: 1440px;
+            height: 829px;
+            padding-top: 60px;
+            box-sizing: border-box;
+            margin: 50px auto;
+            background: url("img/bj.png");
+        }
+        section{
+            height: 711px;
+            width: 1200px;
+            border-radius: 10px;
+            background: #fffffa;
+            margin: auto;
+        }
+        .logo{
+            height: 70px;
+            padding: 20px 40px 0 28px;
+            box-sizing: border-box;
+        }
+        .logo h2{
+            height: 34px;
+            width: 131px;
+            background: url("img/mlogo.png") no-repeat;
+            color:#89bfe1;
+            font: 18px/34px '';
+            text-align: right;
+        }
+        .detail{
+            width: 115px;
+            height: 40px;
+        }
+        .detail em{
+            display: inline-block;
+            margin: 16px 0  0 10px;
+            height: 6px;
+            width: 10px;
+            background: url("img/xiala.png");
+            vertical-align: middle;
+        }
+        .detail em .active{
+            background: url("img/shangla.png");
+        }
+        .detail span{
+            display: inline-block;
+            height: 22px;
+            width: 1px;
+            background: #e0e6e7;
+            margin:6px 10px 0  ;
+            vertical-align: middle;
+        }
+        .detail i{
+            display: inline-block;
+            height: 16px;
+            width: 16px;
+            background: url("img/reset.png");
+            margin-top: 9px;
+            vertical-align: middle;
+        }
+        .header{
+            padding: 10px 20px 0 20px ;
+            border-top: 1px solid #d0d9de;
+            border-bottom: 1px solid #d0d9de;
+            height: 58px;
+            background: #ecf0f6;
+        }
+        .left li{
+            float: left;
+            height: 24px;
+            border: 1px solid #55addc;
+            background: #fffffa;
+            padding:12px 25px 10px 21px;
+            margin-right:10px;
+            border-radius: 5px;
+            color:#55addc;
+            text-align: right;
+            font-size: 14px ;
+        }
+        .left li .active{
+            background: papayawhip;
+        }
+        .left li img{
+          padding-right:18px;
+            vertical-align: middle;
+        }
+        .left .last{
+            width: 36px;
+            height: 36px;
+            padding:  11px 5px 0;
+            text-align: center;
+        }
+        .left .last img{
+            padding-right: 0;
+        }
+        .right li{
+            float: left;
+            margin-left: 10px;
+            height: 38px;
+            width: 38px;
+            border: 1px solid #55addc;
+            border-radius: 5px;
+            }
+        .one{
+            background: url("img/one.png");
+            }
+        .two{
+            background: url("img/two.png") center no-repeat;
+        }
+        .con_left{
+            width: 258px;
+            height: 561px;
+
+            border-right:2px solid #e1e8ed;
+            padding:10px 0  0 20px;
+        }
+        .two1{
+            padding-left: 20px;
+            display: none;
+        }
+
+        .con_left h3{
+            font :14px/34px "";
+        }
+        .con_left h3 a{
+            display: inline-block;
+            width: 10px;
+            height: 7px;
+            background: url("img/daosanjiao.png");
+            margin-top: 15px;
+        }
+        .con_left h3 span{
+            display: inline-block;
+            height: 15px;
+            width: 16px;
+            background: url("img/doc1.png");
+            margin: 9px 6px 0;
+        }
+        /*list*/
+        .list{
+
+            display: none;
+        }
+        .main,.main1{
+            width:920px;
+            height: 571px;
+            background: #f5f8fa;
+            border-radius: 0 0 10px;
+            overflow: auto;
+
+        }
+        .main li{
+            border-bottom: 1px solid #d0d9de;
+            height: 48px;
+            padding:14px 15px 0;
+            font: 16px/34px '';
+            position: relative;
+
+        }
+        .main li h4{
+            float: left;
+            font: 16px/34px '';
+        }
+        .main li strong{
+            float: right;
+            font: 16px/34px '';
+        }
+        .main input{
+            width: 16px;
+            height: 16px;
+            background: #fffffa;
+            border:1px solid #e1e8ed ;
+           margin-top: 10px;
+        }
+        .main li em{
+            display: inline-block;
+            width: 24px;
+            height: 21px;
+            background: url("img/doc3.png");
+            margin: 0 19px;
+            margin-top: 6px;
+            vertical-align: top;
+        }
+        .main li p{
+           position: absolute;
+            left: 365px;
+            top:23px
+        }
+        .main li a{
+            display: inline-block;
+            vertical-align:top;
+            height: 16px;
+            width: 16px;
+            margin-right: 22px;
+        }
+        .main .title{
+            font: bold 16px/34px '';
+            padding-top: 16px;
+        }
+        .main .title i .active{
+            color:  #d0d9de;
+            border-bottom: 2px solid #55addc;
+        }
+        .main .title input{
+            margin-right: 30px;
+        }
+        /*table*/
+        .Table{
+            height: 30px;
+            border-bottom: 2px solid #eee;
+            padding: 10px;
+        }
+        .Table .all,.Table .ming,.Table label{
+           height: 30px;
+           font: 16px/30px '';
+        }
+        .Table .active{
+            display: none;
+        }
+        .Table input{
+            height: 20px;
+            font: 16px/20px '';
+            margin-top: 5px;
+            width: 20px;
+        }
+        .main1 .doc,.main1 .doc1{
+            width: 120px;
+            height: 130px;
+            margin: 10px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+        }
+        .doc{
+            position: relative;
+        }
+        .doc.active{
+            border: 1px solid silver;
+        }
+        .doc.active .cho{
+            display: block;
+        }
+
+        .doc .top,.doc1 .top1{
+            width: 80px;
+            height: 80px;
+            margin: 0 20px;
+            background: url("img/doc.png") no-repeat center;
+
+        }
+        .doc .top img,.doc1 .top1 img{
+            margin: 17px 12px;
+        }
+        .doc .cho{
+            position: absolute;
+            top:5px ;
+            left: 5px;
+            width: 20px;
+            height: 20px;
+            display: none;
+        }
+        .doc .text,.doc1 .text1{
+            font: 16px/20px '';
+            margin: 0 10px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .main1_list .none1{
+            display: none;
+        }
+        .new_item{
+            width: 120px;
+            height: 130px;
+            margin: 10px;
+            position: absolute;
+            top:0;
+            left: 0;
+            display: none;
+        }
+        .new_item .newb{
+            font: 16px/20px '';
+            margin: 0 10px;
+            margin-top: 10px;
+        }
+        .new_item .sure{
+            width: 21px;
+            height: 21px;
+            display: inline-block;
+            background: url("img/sure.png") no-repeat center;
+            border: 1px solid #aecfff;
+        }
+        .new_item .no{
+            width: 21px;
+            height: 21px;
+            display: inline-block;
+            border: 1px solid #aecfff;
+            background: url("img/cancle.png") no-repeat center;
+        }
+        .new_item input{
+            width: 80px;
+            height: 25px;
+            border: 2px solid #aecfff;
+            background: #fffffa;
+        }
+        .open {
+           display: none;
+            position: absolute;
+            top: 90px;
+        }
+
+        .minmain{
+            position: relative;
+            height: 520px;
+        }
+        .main1_list{
+            position: absolute;
+            //width: 120px;
+           //height: 130px;
+            margin: 10px;
+            top:0;
+            left: 0;
+        }
+        .active1{
+            display: block;
+        }
+        .right_hand{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            display: none;
+        }
+        .right_hand li{
+            height: 30px;
+            background: #FFFFFF;
+            font:16px/30px '';
+            border-bottom: 1px dashed #EEEEEE;
+            text-align: center;
+
+        }
+        .right_hand li:hover{
+            background: #00cc99;
+        }
+        .wright_hand {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            display: none;
+        }
+        .wright_hand li{
+            height: 30px;
+            background: #FFFFFF;
+            font:16px/30px '';
+            border-bottom: 1px dashed #EEEEEE;
+            text-align: center;
+        }
+        .wright_hand li:hover{
+            background: pink;
+        }
+        .hide{
+            width:140px;
+            height: 130px;
+            display: none;
+            float: left;
+            margin-top:5px;
+            margin-left: 5px;
+            z-index: 9;
+            position: relative;
+
+        }
+        .hide-p{
+            width:140px;
+            height:26px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        .hide-p input{
+            width:73px;
+            height:14px;
+            border:1px solid #aecfff;
+            border-radius:5px;
+            float: left;
+            padding:5px;
+            background: #FFFFFF;
+        }
+        .hide-p a{
+            width:22px;
+            height:24px;
+            border:1px solid #aecfff;
+            float: left;
+        }
+        .hide-p .sure{
+            margin:0 2px;
+            background:#FFFFFF url("img/sure.png") no-repeat center;
+        }
+        .hide-p .cancle{
+            background:#FFFFFF url("img/cancle.png") no-repeat center;
+        }
+        .kuang{
+            display: none;
+            width: 150px;
+            position: absolute;
+        }
+        .div1{
+            position: absolute;
+            background: lightblue;
+            opacity: .3;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <section>
+            <div class="logo">
+                <h2 class="fl">妙味云盘</h2>
+                <p class="detail fr">
+                    <img src="img/head.png" alt="">
+                    <em></em>
+                    <span></span>
+                    <i></i>
+                </p>
+            </div>
+            <div class="header">
+                <ul class="fl left clearfix">
+                    <li><img src="img/download.png" alt="">下载</li>
+                    <li><img src="img/share.png" alt="">分享</li>
+                    <li><img src="img/move.png" alt="">移动到</li>
+                    <li class="new_name"><img src="img/name.png" alt="">重命名</li>
+                    <li class="delete"><img src="img/delete.png" alt="">删除</li>
+                    <li class="nb"><img src="img/new.png" alt="">新建文件夹</li>
+                    <li class="last"><img src="img/refreash.png" alt=""></li>
+                </ul>
+                <ul class="fr right">
+                    <li class="one"></li>
+                    <li class="two"></li>
+                </ul>
+            </div>
+            <div class="content clearfix">
+                <div class="con_left fl">
+                    <ul class="tree">
+
+                    </ul>
+                </div>
+                <!--list-->
+                <!--<ul class="main fr list">
+                    <li class="title">
+                        <input type="checkbox">
+                        <i>微云</i>
+                        <span> > </span>
+                        <i>JS课程</i>
+                        <span> > </span>
+                        <i>css课程</i>
+                        <span> > </span>
+                        <i>JS基础课程</i>
+                    </li>
+                    <li>
+                        <h4>
+                            <input type="checkbox">
+                            <em></em>
+                            <i>JS课程</i>
+                        </h4>
+                        <p>
+                            <a href="javascript:;"><img src="img/download.png" alt=""></a>
+                            <a href="javascript:;"><img src="img/share.png" alt=""></a>
+                            <a href="javascript:;"><img src="img/move.png" alt=""></a>
+                            <a href="javascript:;"><img src="img/name.png" alt=""></a>
+                            <a href="javascript:;"><img src="img/delete.png" alt=""></a>
+                        </p>
+                        <strong>2017-12-31</strong>
+                    </li>
+                </ul>-->
+                <!--网格-->
+                <div class="main1 fr ">
+                    <div class="Table">
+                        <p class="all active fr">全部文件</p>
+                        <p class="ming fr"><!--<a href="">返回上一级 | </a><a href="">全部文件</a>--></p>
+                        <label><input type="checkbox" value="全选" class="fl check_all" id="inp">全选</label>
+                    </div>
+                    <div class="minmain">
+                        <div class="hide">
+                            <div class="file-pic"></div>
+                            <div class="hide-p">
+                                <input type="text" value="新建文件夹"/>
+                                <a href="javascript:;" class="sure"></a>
+                                <a href="javascript:;" class="cancle"></a>
+                            </div>
+                        </div>
+                        <ul class="main1_list clearfix">
+                           <!-- <li class="doc fl">
+                                <div class="top"><img src="img/doc.png" alt="" class="img_doc"></div>
+                                <p class="text">新建文件夹</p>
+                                <input type="checkbox" class="cho">
+                            </li>-->
+                        </ul>
+                        <ol class="right_hand">
+                            <li>打开</li>
+                            <li>下载</li>
+                            <li>推送到设备</li>
+                            <li>分享</li>
+                            <li>复制到</li>
+                            <li>移动到</li>
+                            <li>重命名</li>
+                            <li>删除</li>
+                        </ol>
+                        <ol class="wright_hand">
+                            <li>查看</li>
+                            <li>排序方式</li>
+                            <li>刷新</li>
+                            <li>重新加载页面</li>
+                            <li>新加文件夹</li>
+                            <li>会员中心</li>
+                        </ol>
+                        <div class="kuang">
+                            <div class="doc ">
+                                <div class="top"><img src="img/doc.png" alt="" class="img_doc"></div>
+                                <p class="text">文件夹</p>
+                               <!-- <input type="checkbox" class="cho">-->
+                            </div>
+                        </div>
+                        <div class="div1"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+<script src="js/data.js"></script>
+<script src="js/tool.js"></script>
+<script src="js/main.js"></script>
+
+
+
+
+</body>
+</html>

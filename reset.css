@@ -1,0 +1,66 @@
+/* CSS Document */
+/*....................................reset.....................*/
+body,h1,h2,h3,h4,h5,h6,dl,dd,p{
+	margin:0;
+	font:12px "";
+	}
+body{
+	background: #fff;
+	//overflow-x: hidden;
+}	
+ul,ol,li{
+	padding:0;
+	list-style:none;
+	margin:0;
+	}
+strong,b,h1,h2,h3,h4,h5,h6{
+	font-weight:0;	
+	}
+em,i{
+	font-style:normal;
+	}	
+img{
+	vertical-align:top;
+	border:0 ;
+	//width: 100%;/*充满整屏的图片宽，和父元素宽一致，要是高固定，在给img写高*/
+	}	
+a{
+	text-decoration:none;
+	color:black;
+	}
+
+.clearfix:after{
+	content:"";	
+	display:block;
+	clear:both;
+	height:0;
+	overflow:hidden;
+	visibility:hidden;	
+}
+.clearfix{
+	zoom:1;
+}
+.fr{
+	float:right;
+	}
+.fl{
+	float:left;
+	}	
+.vertical1{
+	display:inline-block;
+	vertical-align:middle;
+	height:100%;
+	width:0;
+	}/*加一个空的span标签，图片垂直居中*/			
+input,textarea,select,option,fieldset{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background: none;
+	vertical-align: top;
+}
+.maginauto{
+	margin: 0 auto;
+	width: 1200px;
+}
+
